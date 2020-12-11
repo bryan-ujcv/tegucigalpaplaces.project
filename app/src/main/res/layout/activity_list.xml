@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+        <androidx.constraintlayout.widget.ConstraintLayout android:background="@drawable/list_background" android:layout_height="match_parent" android:layout_width="match_parent" xmlns:tools="http://schemas.android.com/tools" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <androidx.recyclerview.widget.RecyclerView android:layout_height="643dp" android:layout_width="411dp" android:id="@+id/lista_bares" app:layout_constraintHorizontal_bias="0.0" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toTopOf="parent" app:layout_constraintStart_toStartOf="parent"/>
+
+    <Button android:layout_height="wrap_content" android:layout_width="wrap_content" android:id="@+id/logOut" app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="158dp" android:layout_marginBottom="22dp" app:layout_constraintBottom_toBottomOf="parent" android:text="@string/googleLogout"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

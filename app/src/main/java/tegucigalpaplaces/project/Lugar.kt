@@ -1,36 +1,26 @@
 package tegucigalpaplaces.project
 
-class Lugar {
-    private lateinit var nombre:String
-    private lateinit var ubicacion:String
-    private lateinit var horario:String
-    private lateinit var img:String
+import android.os.Parcelable
+import com.google.firebase.database.Exclude
+import com.google.firebase.database.IgnoreExtraProperties
+import kotlinx.android.parcel.Parcelize
 
-    fun getNombre(): String? {
-        return nombre
-    }
-    fun setNombre(nombre: String) {
-        this.nombre = nombre
-    }
+@Parcelize
+@IgnoreExtraProperties
+data class Lugar(
+    var nombre: String? = "",
+    var ubicacion: String? = "",
+    var horario: String? = "",
+    var img: String? = ""
+) : Parcelable {
 
-    fun getUbicacion(): String? {
-        return ubicacion
-    }
-    fun setUbicacion(ubicacion: String) {
-        this.ubicacion = ubicacion
-    }
-
-    fun getHorario(): String? {
-        return horario
-    }
-    fun setHorario(horario: String) {
-        this.horario = horario
-    }
-
-    fun getImg(): String? {
-        return img
-    }
-    fun setImg(img: String) {
-        this.img = img
+    @Exclude
+    fun toMap(): Map<String, Any?>{
+        return mapOf(
+            "nombre" to nombre,
+            "ubicacion" to ubicacion,
+            "horario" to horario,
+            "img" to img
+        )
     }
 }

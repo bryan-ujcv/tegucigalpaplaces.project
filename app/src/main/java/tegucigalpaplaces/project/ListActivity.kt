@@ -34,7 +34,7 @@ class ListActivity : AppCompatActivity(),LugarClickListener {
 
         db=FirebaseDatabase.getInstance()
         mbase=db.getReference("lugares")
-        getImageData()
+        getData()
         val adapter = LugarAdapter(ArrayList<Lugar>(), this)
         recyclerView=findViewById(R.id.recycler1)
         recyclerView.setHasFixedSize(true)
@@ -43,7 +43,7 @@ class ListActivity : AppCompatActivity(),LugarClickListener {
 
     }
 
-    private fun getImageData() {
+    private fun getData() {
         val listener = object : ValueEventListener {
             override fun onDataChange(dataSnapshot: DataSnapshot) {
                 Log.w(TAG, dataSnapshot.toString())
@@ -76,7 +76,7 @@ class ListActivity : AppCompatActivity(),LugarClickListener {
 
     override fun lugarClicked(lugar: Lugar) {
         val intent = Intent(this, DescriptionActivity::class.java)
-        intent.putExtra("descripcion", lugar)
+        intent.putExtra("Lugar", lugar)
         startActivity(intent)
     }
 }

@@ -8,6 +8,7 @@ import kotlinx.android.parcel.Parcelize
 @Parcelize
 @IgnoreExtraProperties
 data class Lugar(
+    var Id: Int? = 0,
     var nombre: String? = "",
     var ubicacion: String? = "",
     var horario: String? = "",
@@ -17,6 +18,7 @@ data class Lugar(
     @Exclude
     fun toMap(): Map<String, Any?>{
         return mapOf(
+            "Id" to Id,
             "nombre" to nombre,
             "ubicacion" to ubicacion,
             "horario" to horario,

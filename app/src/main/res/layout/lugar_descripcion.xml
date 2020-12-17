@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="731dp" xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:background="@drawable/info_background"
+        xmlns:android="http://schemas.android.com/apk/res/android">
+        <TextView
+                android:text="TextView"
+                android:layout_width="360dp"
+                android:layout_height="61dp" android:id="@+id/horario"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="24dp" android:layout_marginBottom="176dp"/>
+        <TextView
+                android:text="@string/horario"
+                android:layout_width="360dp"
+                android:layout_height="20dp" android:id="@+id/txtHorario"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginStart="24dp" android:layout_marginBottom="252dp"/>
+        <TextView
+                android:text="@string/ubicacion"
+                android:layout_width="363dp"
+                android:layout_height="24dp" android:id="@+id/txtUbicacion"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="24dp" android:layout_marginBottom="132dp"/>
+        <ImageView
+                android:layout_width="379dp"
+                android:layout_height="362dp" tools:srcCompat="@tools:sample/avatars" android:id="@+id/imgBar"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" tools:layout_editor_absoluteY="16dp"
+                tools:layout_editor_absoluteX="16dp"/>
+        <TextView
+                android:text="TextView"
+                android:layout_width="364dp"
+                android:layout_height="77dp" android:id="@+id/ubicacion"
+                app:layout_constraintEnd_toEndOf="parent" app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginEnd="24dp" android:layout_marginBottom="48dp"/>
+        <TextView
+                android:text="TextView"
+                android:layout_width="238dp"
+                android:layout_height="34dp" android:id="@+id/txtNombre"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imgBar"
+                android:textAllCaps="true" android:layout_marginStart="86dp" android:layout_marginEnd="87dp"
+                app:layout_constraintEnd_toEndOf="parent" android:layout_marginTop="40dp"
+                app:layout_constraintHorizontal_bias="1.0"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
